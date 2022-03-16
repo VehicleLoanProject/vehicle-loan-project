@@ -1,0 +1,91 @@
+--create database vehicleloan
+
+ create table AdminDetails(
+adminid varchar(50) primary key ,
+name varchar(50),
+emailid varchar(25),
+password varchar(10),
+last_login datetime,
+contactno bigint
+)
+
+create table employmentDetails(
+employmentid varchar(50) primary key,
+typeofemployment varchar(20) not null,
+annualsalary decimal(18,2) not null,
+existingemi decimal(18,2)
+);
+
+create table logindetails(
+userid varchar(50) primary key,
+password varchar(50) not null)
+
+create table vehicledetails(
+vehicleid varchar(50)  primary key,
+userid varchar(50),
+carmake varchar(20) not null,
+carmodel varchar(20) not null,
+exshowroomprice decimal(18,2) default 0,
+onroadprice decimal(18,2) default 0
+foreign key (userid) references logindetails(userid)
+); 
+
+
+
+create table loandetails(
+loanid varchar(50) primary key,
+userid varchar(50) not null,
+loanamount decimal(18,2) not null,
+loantenure int not null,
+interestrate int not null
+foreign key (userid) references logindetails(userid)
+);
+
+create table identitydocuments(
+identitykey varchar primary key,
+userid varchar(50) not null,
+adharcard binary not null,
+pancard binary not null,
+photo binary not null,
+salaryslip binary not null
+foreign key (userid) references logindetails(userid)
+);
+
+create table applicantdetails(
+applicantid varchar(50) primary key,
+userid varchar(50) not null,
+name varchar(50) not null,
+age int not null,
+gender varchar(50) not null,
+typeofemployement varchar(50) not null,
+yearlysalary decimal(18,4) not null,
+existingemi decimal(18,4),
+foreign key (userid) references logindetails(userid));
+
+create table personaldetails(
+personid varchar(50) primary key,
+userid varchar(50) not null,
+firstname varchar(50) not null,
+age int not null,
+gender varchar(50) not null,
+mobileno bigint not null,
+emailid varchar(50) not null,
+password varchar(50) not null,
+address varchar(100) not null,
+state varchar(50) not null,
+city varchar(50) not null,
+foreign key (userid) references logindetails(userid),
+pincode int not null);
+
+create table contactdetails(
+contactid varchar(50) primary key,
+userid varchar(50) not null,
+mobileno bigint not null,
+emailid varchar(50) not null
+foreign key (userid) references logindetails(userid));
+
+alter table employmentdetails add userid varchar(50)
+alter table employmentdetails add foreign key(userid) references logindetails(userid)
+create table status(
+statusid int primary key,
+statusname varchar(40) not null);
