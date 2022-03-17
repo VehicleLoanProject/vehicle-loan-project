@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Swapnil Bagul\\.nuget\\packages\\": {}
+    "C:\\Users\\ideal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project\\VehicalLoan\\VehicalLoan.Data\\VehicalLoan.Data.csproj",
+      "projectUniqueName": "E:\\vehicle-loan-project\\VehicalLoan\\VehicalLoan.Data\\VehicalLoan.Data.csproj",
       "projectName": "VehicalLoan.Data",
-      "projectPath": "C:\\Project\\VehicalLoan\\VehicalLoan.Data\\VehicalLoan.Data.csproj",
-      "packagesPath": "C:\\Users\\Swapnil Bagul\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\VehicalLoan\\VehicalLoan.Data\\obj\\",
+      "projectPath": "E:\\vehicle-loan-project\\VehicalLoan\\VehicalLoan.Data\\VehicalLoan.Data.csproj",
+      "packagesPath": "C:\\Users\\ideal\\.nuget\\packages\\",
+      "outputPath": "E:\\vehicle-loan-project\\VehicalLoan\\VehicalLoan.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Swapnil Bagul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ideal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
