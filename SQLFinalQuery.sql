@@ -90,3 +90,14 @@ CustomerId int not null,
 constraint pk_loan_scheme primary key (SchemeId),
 constraint fk_loan_scheme foreign key (CustomerId) references ApplicantDetails(CustomerId)
 )
+
+alter table Vehicle alter column CustomerId int null 
+alter table LoanScheme alter column CustomerId int null 
+alter table IdentityDocuments alter column CustomerId int null 
+alter table LoanDetails alter column CustomerId int null 
+alter table UserRegistration alter column RoleId int null 
+alter table ApplicantDetails alter column UserId varchar(50) null 
+alter table LoanDetails alter column StatusId int null 
+
+alter table ApplicantDetails alter column MiddleName varchar(20) null 
+alter table LoanScheme add SchemeDescription varchar(50) not null
