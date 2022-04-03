@@ -49,14 +49,7 @@ constraint pk_vehicle primary key (VehicleId ),
  constraint fk_vehicle foreign key (CustomerId) references ApplicantDetails(CustomerId)
 ); 
 
-create table IdentityDocuments(
-identityId bigint identity NOT NULL,
-imagepath varchar(max) not null,
-InsertedOn Datetime not null,
-CustomerId int not null,
-constraint pk_identity_documents primary key (identityId),
-constraint fk_identity_documents foreign key(CustomerId) references ApplicantDetails(CustomerId)
-);
+
 
 create table ApplicationStatus(
 StatusId int identity(1,1),
@@ -99,3 +92,16 @@ alter table LoanDetails alter column StatusId int null
 
 alter table ApplicantDetails alter column MiddleName varchar(20) null 
 alter table LoanScheme add SchemeDescription varchar(50) not null
+---make changes from here.
+drop table IdentityDocuments
+
+create table IdentityDocuments(
+identityId bigint identity NOT NULL,
+imagepath varchar(max) not null,
+InsertedOn Datetime not null,
+CustomerId int ,
+constraint pk_identity_documents primary key (identityId),
+constraint fk_identity_documents foreign key(CustomerId) references ApplicantDetails(CustomerId)
+);
+
+alter table LoanDetails add LoanSchemeName varchar(50)
