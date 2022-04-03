@@ -50,14 +50,12 @@ constraint pk_vehicle primary key (VehicleId ),
 ); 
 
 create table IdentityDocuments(
-IdentityId int identity(100,1),
-Adharcard binary not null,
-Pancard binary not null,
-Photo binary not null,
-Salaryslip binary not null,
+identityId bigint identity NOT NULL,
+imagepath varchar(max) not null,
+InsertedOn Datetime not null,
 CustomerId int not null,
-constraint pk_identity_documents primary key (IdentityId),
-constraint fk_identity_documents foreign key (CustomerId) references ApplicantDetails(CustomerId)
+constraint pk_identity_documents primary key (identityId),
+constraint fk_identity_documents foreign key(CustomerId) references ApplicantDetails(CustomerId)
 );
 
 create table ApplicationStatus(
